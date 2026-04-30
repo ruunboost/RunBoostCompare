@@ -183,7 +183,7 @@ input[type=range]{width:100%;accent-color:#185FA5;cursor:pointer}
   </div>
   <div class="form-section">
     <div class="section-label">Ton objectif principal</div>
-    <div class="g3">
+    <div class="g2">
       <button class="opt" onclick="ch(this,'objectif','endurance');hideComp()"><span class="ic">🌍</span><span class="lb">Endurance</span><span class="sl">Footing, sorties longues</span></button>
       <button class="opt" onclick="ch(this,'objectif','vitesse');hideComp()"><span class="ic">💨</span><span class="lb">Vitesse</span><span class="sl">Tempo, fractionné</span></button>
       <button class="opt" onclick="ch(this,'objectif','hybride');hideComp()"><span class="ic">🔄</span><span class="lb">Polyvalent</span><span class="sl">Un peu des deux</span></button>
@@ -200,10 +200,12 @@ input[type=range]{width:100%;accent-color:#185FA5;cursor:pointer}
   </div>
   <div class="form-section">
     <div class="section-label">Volume hebdomadaire</div>
-    <div class="slider-wrap">
-      <div class="slider-top"><span>Kilomètres / semaine</span><strong id="km-val">35 km</strong></div>
-      <input type="range" min="0" max="120" value="35" step="5" oninput="updKm(this.value)">
-      <div class="slider-labels"><span>0 km</span><span>120 km</span></div>
+    <div class="g3">
+      <button class="opt" onclick="ch(this,'km','10')"><span class="lb">Moins de 20 km</span></button>
+      <button class="opt" onclick="ch(this,'km','30')"><span class="lb">20 – 40 km</span></button>
+      <button class="opt" onclick="ch(this,'km','50')"><span class="lb">40 – 60 km</span></button>
+      <button class="opt" onclick="ch(this,'km','70')"><span class="lb">60 – 80 km</span></button>
+      <button class="opt" onclick="ch(this,'km','90')"><span class="lb">Plus de 80 km</span></button>
     </div>
   </div>
   <div class="nav-btns">
@@ -220,17 +222,26 @@ input[type=range]{width:100%;accent-color:#185FA5;cursor:pointer}
   <div class="form-section">
     <div class="section-label">Surface principale</div>
     <div class="g2">
-      <button class="opt" onclick="ch(this,'surface','route')"><span class="ic">🏙️</span><span class="lb">Route</span><span class="sl">Asphalte, tapis, piste</span></button>
-      <button class="opt" onclick="ch(this,'surface','trail')"><span class="ic">⛰️</span><span class="lb">Trail</span><span class="sl">Sentiers, chemins, montagne</span></button>
+    <button class="opt" onclick="ch(this,'surface','route')"><span class="ic">🏙️</span><span class="lb">Route</span></button>
+      <button class="opt" onclick="ch(this,'surface','trail')"><span class="ic">⛰️</span><span class="lb">Trail</span></button>
     </div>
   </div>
   <div class="form-section">
     <div class="section-label">Type de foulée</div>
     <div class="section-hint">Observe l'usure de tes anciennes chaussures</div>
     <div class="g3">
-      <button class="opt" onclick="ch(this,'foulee','pronateur')"><span class="ic">🦶</span><span class="lb">Pronateur</span><span class="sl">Usure côté intérieur</span></button>
-      <button class="opt" onclick="ch(this,'foulee','neutre')"><span class="ic">🦶</span><span class="lb">Neutre</span><span class="sl">Usure centrale</span></button>
-      <button class="opt" onclick="ch(this,'foulee','supinateur')"><span class="ic">🦶</span><span class="lb">Supinateur</span><span class="sl">Usure côté extérieur</span></button>
+<button class="opt" onclick="ch(this,'foulee','pronateur')">
+        <span class="ic"><svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="16" rx="18" ry="12" fill="#e8e8e5"/><ellipse cx="24" cy="16" rx="18" ry="12" fill="none" stroke="#bbb" stroke-width="1.5"/><ellipse cx="16" cy="18" rx="7" ry="5" fill="#185FA5" opacity="0.75"/><ellipse cx="16" cy="10" rx="5" ry="4" fill="#185FA5" opacity="0.55"/></svg></span>
+        <span class="lb">Pronateur</span><span class="sl">Usure côté intérieur</span>
+      </button>
+      <button class="opt" onclick="ch(this,'foulee','neutre')">
+        <span class="ic"><svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="16" rx="18" ry="12" fill="#e8e8e5"/><ellipse cx="24" cy="16" rx="18" ry="12" fill="none" stroke="#bbb" stroke-width="1.5"/><ellipse cx="24" cy="19" rx="7" ry="4" fill="#185FA5" opacity="0.75"/><ellipse cx="24" cy="10" rx="5" ry="4" fill="#185FA5" opacity="0.55"/></svg></span>
+        <span class="lb">Neutre</span><span class="sl">Usure centrale</span>
+      </button>
+      <button class="opt" onclick="ch(this,'foulee','supinateur')">
+        <span class="ic"><svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="16" rx="18" ry="12" fill="#e8e8e5"/><ellipse cx="24" cy="16" rx="18" ry="12" fill="none" stroke="#bbb" stroke-width="1.5"/><ellipse cx="32" cy="18" rx="7" ry="5" fill="#185FA5" opacity="0.75"/><ellipse cx="32" cy="10" rx="5" ry="4" fill="#185FA5" opacity="0.55"/></svg></span>
+        <span class="lb">Supinateur</span><span class="sl">Usure côté extérieur</span>
+      </button>
     </div>
     <div style="margin-top:10px;font-size:12px;color:#888;background:#f5f5f3;border-radius:8px;padding:10px">
       💡 <strong>Tu ne sais pas ?</strong> Sélectionne <strong>Neutre</strong> — c'est le choix le plus sûr pour commencer.
@@ -332,11 +343,6 @@ input[type=range]{width:100%;accent-color:#185FA5;cursor:pointer}
       <button class="opt" onclick="ch(this,'carbone','oui')"><span class="ic">⚡</span><span class="lb">Oui</span><span class="sl">Perf maximale</span></button>
       <button class="opt" onclick="ch(this,'carbone','non')"><span class="ic">🙅</span><span class="lb">Non</span><span class="sl">Sans carbone</span></button>
       <button class="opt" onclick="ch(this,'carbone','indifferent')"><span class="ic">🤷</span><span class="lb">Peu importe</span><span class="sl">Le meilleur match</span></button>
-    </div>
-  </div>
-  <div class="form-section" style="border-bottom:none">
-    <div style="font-size:12px;color:#888;background:#f5f5f3;border-radius:8px;padding:10px;line-height:1.6">
-      💡 Des promos régulières chez <strong>I-Run, Alltricks, Lepape, Top4Running, Private Sport Shop, RunningPoint</strong> et <strong>Tonton Outdoor</strong>.
     </div>
   </div>
   <div class="nav-btns">
