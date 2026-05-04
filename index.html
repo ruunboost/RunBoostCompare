@@ -344,11 +344,6 @@ input[type=range]{width:100%;accent-color:#185FA5;cursor:pointer}
       <button class="opt" onclick="ch(this,'carbone','indifferent')"><span class="ic">🤷</span><span class="lb">Peu importe</span><span class="sl">Le meilleur match</span></button>
     </div>
   </div>
-  <div class="form-section" style="border-bottom:none">
-    <div style="font-size:12px;color:#888;background:#f5f5f3;border-radius:8px;padding:10px;line-height:1.6">
-      💡 Des promos régulières chez <strong>I-Run, Alltricks, Lepape, Top4Running, Private Sport Shop, RunningPoint</strong> et <strong>Tonton Outdoor</strong>.
-    </div>
-  </div>
   <div class="nav-btns">
     <button class="btn-prev" onclick="prevStep(4)">← Retour</button>
     <button class="btn-next" onclick="search()">Voir mes recommandations →</button>
@@ -736,14 +731,6 @@ function renderResults(shoes){
         +'<span class="arrow">▼</span>'
         +'</button>'
         +'<div class="fiche-body" id="fiche-body-'+id+'">'+fiche+'</div>'
-        // REVENDEURS
-        +'<div class="revendeurs">Retrouve ce modèle chez '
-        +'<a href="https://i-run.fr" target="_blank">I-Run</a>, '
-        +'<a href="https://alltricks.fr" target="_blank">Alltricks</a>, '
-        +'<a href="https://lepape.com" target="_blank">Lepape</a>, '
-        +'<a href="https://top4running.fr" target="_blank">Top4Running</a>, '
-        +'<a href="https://privatesportshop.com" target="_blank">Private Sport Shop</a>'
-        +'</div>'
         +'</div>';
     }).join('');
   }
